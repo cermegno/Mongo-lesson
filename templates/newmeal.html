@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>New Meal</title>
+		<meta http-equiv="Expires" content="0">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	</head>
+    <body>
+		<div class="container">
+		<h1 class="gallery-title"><u>New Meal</u></h1>
+		<form method="post" action="{{ url_for('mealthankyou') }}" enctype="multipart/form-data">
+		
+			<h2>Meal Date</h2>
+			<input type="date" name="mealdate" value="07/15/2017"><br>
+			
+			<h2>Meal Type</h2>
+			<input type="radio" name="mealtype" value="breakie" checked="checked" /><b> Breakie
+			<input type="radio" name="mealtype" value="lunch" /> Lunch
+			<input type="radio" name="mealtype" value="dinner" /> Dinner
+			<br>
+  
+			<h2>Calories (0 - 3000)</h2>
+			<input type="number" name="calories" min="0" max="3000" value= "1000" step="50"><br>
+			
+			<h2>Meal Description</h2>
+			<input type="text" class="form-control" placeholder="Meal descriptions" rows="2" name="description"><br>
+
+			
+		  <input type="submit" value="SUBMIT"/>
+		</form>
+
+	</body>
+</html>
+ 
