@@ -41,9 +41,17 @@ cursor = db.countries.find()
 for each_country in cursor:
     print each_country
 
+print "\n## A cursor is pointer to the result set of a query. You can iterate through it to retrieve results"
+print "\n## How many elements were returned?"
+print cursor.count()
+print "\n## Return the first element in the cursor"
+print cursor[0]
+print "\n## Each element in the results of the query is a Dictionary"
+print type(cursor[0])
+
 print "\n## Find all entries matching a criteria"
 cursor = db.countries.find({"capital": "Rome", "population" : 100000})
-#print "The amount of records manthcin " + str(db.countries.find({"population" : {"$gt" : 35000}}).count())
+#print "The amount of records matching " + str(db.countries.find({"population" : {"$gt" : 35000}}).count())
 for each_country in cursor:
     print each_country['name']
 
