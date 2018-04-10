@@ -45,6 +45,7 @@ print "\n## A cursor is pointer to the result set of a query. You can iterate th
 print "\n## How many elements were returned?"
 print cursor.count()
 print "\n## Return the first element in the cursor"
+cursor.rewind()
 print cursor[0]
 print "\n## Each element in the results of the query is a Dictionary"
 print type(cursor[0])
